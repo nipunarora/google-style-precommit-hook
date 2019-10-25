@@ -20,7 +20,7 @@ Essentially the main reason is that Google mantains the tool chain for us, so we
   ```
   repos:
   - repo: https://github.com/nipunarora/java-style-check-setup
-    sha: c2461b545a40ac3fc00272b70766ee9ce765b911
+    rev: v1.0
     hooks:
       - id: google-style-java
   ```
