@@ -19,7 +19,7 @@ Essentially the main reason is that Google mantains the tool chain for us, so we
 
   ```
   repos:
-  - repo: https://github.com/nipunarora/java-style-check-setup
+  - repo: https://github.com/nipunarora/google-style-precommit-hook
     rev: v1.0
     hooks:
       - id: google-style-java
