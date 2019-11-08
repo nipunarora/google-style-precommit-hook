@@ -11,16 +11,24 @@ Essentially the main reason is that Google mantains the tool chain for us, so we
 
 ### Step by Step Process
 
-1. Install pre-commit hook in your machine
+1. Pre-requisits
+
+
+Install pre-commit hook in your machine
 
 `brew install pre-commit`
+
+Download the google-java-formatter from here (I have taken the latest):
+
+https://github.com/google/google-java-format/releases
+
 
 2. In your git repo create a file named `.pre-commit-config.yaml`
 
   ```
   repos:
   - repo: https://github.com/nipunarora/google-style-precommit-hook
-    sha: 9cf7465188a347fda68ee263ef19c0f7df5b41e0
+    sha: 03e001af1ed477774e602a1e14281a78c16a52eb
     hooks:
       - id: google-style-java
   ```
@@ -35,13 +43,12 @@ Essentially the main reason is that Google mantains the tool chain for us, so we
 
 4. (optional) Do a pre-run on all files 
 
-  `pre-commit run --all-files`
+  `find . -type f -name "*.java" | xargs java -jar ~/.cache/google-java-format-1.7-all-deps.jar -i`
 
 5. Do git commits and voila, you are going to enforce auto-formatting
 
 
-6. In your IntelliJ environment install 
-
+### For IntelliJ Users
 A
 [google-java-format IntelliJ plugin](https://plugins.jetbrains.com/plugin/8527)
 is available from the plugin repository. To install it, go to your IDE's
