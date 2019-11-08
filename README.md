@@ -20,7 +20,7 @@ Essentially the main reason is that Google mantains the tool chain for us, so we
   ```
   repos:
   - repo: https://github.com/nipunarora/google-style-precommit-hook
-    sha: f2afa29be8de6fad12124f9b38cb699c7c6864e1
+    sha: 9cf7465188a347fda68ee263ef19c0f7df5b41e0
     hooks:
       - id: google-style-java
   ```
